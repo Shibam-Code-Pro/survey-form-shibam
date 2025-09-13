@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">Developer Experience Survey</h1>
+            <p id="description">Help us understand your development journey and preferences to improve our tools and resources</p>
+        </header>
+
+        <form id="survey-form">
+            <!-- Personal Information Section -->
+            <fieldset class="form-section">
+                <legend>Personal Information</legend>
+                
+                <div class="input-group">
+                    <label id="name-label" for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-group">
+                    <label id="email-label" for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+
+                <div class="input-group">
+                    <label id="number-label" for="number">Years of Experience</label>
+                    <input type="number" id="number" name="number" min="0" max="50" placeholder="Years in development">
+                </div>
+            </fieldset>
+
+            <!-- Professional Details Section -->
+            <fieldset class="form-section">
+                <legend>Professional Details</legend>
+                
+                <div class="input-group">
+                    <label for="dropdown">Current Role</label>
+                    <select id="dropdown" name="role" required>
+                        <option value="">Select your current role</option>
+                        <option value="frontend">Frontend Developer</option>
+                        <option value="backend">Backend Developer</option>
+                        <option value="fullstack">Full Stack Developer</option>
+                        <option value="mobile">Mobile Developer</option>
+                        <option value="devops">DevOps Engineer</option>
+                        <option value="data">Data Scientist</option>
+                        <option value="ml">Machine Learning Engineer</option>
+                        <option value="designer">UI/UX Designer</option>
+                        <option value="manager">Engineering Manager</option>
+                        <option value="student">Student</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Company Size</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="company-size" value="startup">
+                            <span class="radio-custom"></span>
+                            Startup (1-50 employees)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="company-size" value="medium">
+                            <span class="radio-custom"></span>
+                            Medium (51-500 employees)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="company-size" value="large">
+                            <span class="radio-custom"></span>
+                            Large (500+ employees)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="company-size" value="freelance">
+                            <span class="radio-custom"></span>
+                            Freelancer/Independent
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Technical Preferences Section -->
+            <fieldset class="form-section">
+                <legend>Technical Preferences</legend>
+                
+                <div class="input-group">
+                    <label>Programming Languages (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="javascript">
+                            <span class="checkbox-custom"></span>
+                            JavaScript
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="python">
+                            <span class="checkbox-custom"></span>
+                            Python
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="java">
+                            <span class="checkbox-custom"></span>
+                            Java
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="csharp">
+                            <span class="checkbox-custom"></span>
+                            C#
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="cpp">
+                            <span class="checkbox-custom"></span>
+                            C++
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="go">
+                            <span class="checkbox-custom"></span>
+                            Go
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="rust">
+                            <span class="checkbox-custom"></span>
+                            Rust
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="languages" value="typescript">
+                            <span class="checkbox-custom"></span>
+                            TypeScript
+                        </label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Development Tools (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tools" value="vscode">
+                            <span class="checkbox-custom"></span>
+                            VS Code
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tools" value="intellij">
+                            <span class="checkbox-custom"></span>
+                            IntelliJ IDEA
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tools" value="vim">
+                            <span class="checkbox-custom"></span>
+                            Vim/Neovim
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tools" value="sublime">
+                            <span class="checkbox-custom"></span>
+                            Sublime Text
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tools" value="atom">
+                            <span class="checkbox-custom"></span>
+                            Atom
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tools" value="webstorm">
+                            <span class="checkbox-custom"></span>
+                            WebStorm
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Feedback Section -->
+            <fieldset class="form-section">
+                <legend>Additional Feedback</legend>
+                
+                <div class="input-group">
+                    <label for="comments">Comments and Suggestions</label>
+                    <textarea id="comments" name="comments" rows="6" placeholder="Share your thoughts, suggestions, or any additional information you'd like us to know..."></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit" id="submit">Submit Survey</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
